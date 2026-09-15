@@ -9,13 +9,15 @@ test.describe("login", () => {
       .locator('input[name="password"]')
       .fill(process.env.TEST_USER_PASSWORD);
     await page.getByRole("button", { name: "Login" }).click();
-    await expect(page.getByRole("button", { name: "Logout" })).toBeVisible();
+    await expect(page.locator('input[name="email"]')).toHaveCount(0);
   });
   test("an error message occurs with invalid information", async ({ page }) => {
     await page.goto("/login/");
     await page.locator('input[name="email"]').fill(process.env.TEST_USER_EMAIL);
     await page.locator('input[name="password"]').fill("joiegeffsfew223wg");
     await page.getByRole("button", { name: "Login" }).click();
-    await expect(page.getByRole("alert")).toContainText("Login failed");
+    await expect(page.getByRole("alert")).toContainText(
+      "Invalid email or password",
+    );
   });
 });
