@@ -107,3 +107,7 @@ You can find the test files within the `tests`-folder:
 `tests/` -> `listeners/` -> `venues/` -> [`renderVenue.spec.js`](tests/listeners/venues/renderVenue.spec.js)
 
 `tests/` -> `navigation/` -> [`home.spec.js`](tests/navigation/home.spec.js)
+
+## Important note!
+
+Due to old links in the source code, tests for the `venues` (`displayVenueList.spec.js` and `renderVenue.spec.js`) will fail unless the source code is updated.
