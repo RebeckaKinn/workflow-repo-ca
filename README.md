@@ -102,4 +102,8 @@ You can find the test files within the `tests`-folder:
 
 `tests/` -> `listeners/` -> `auth/` -> [`loginFormListener.spec.js`](tests/listeners/auth/loginFormListener.spec.js)
 
+`tests/` -> `listeners/` -> `venues/` -> [`displayVenueList.spec.js`](tests/listeners/venues/displayVenueList.spec.js)
+
+`tests/` -> `listeners/` -> `venues/` -> [`renderVenue.spec.js`](tests/listeners/venues/renderVenue.spec.js)
+
 `tests/` -> `navigation/` -> [`home.spec.js`](tests/navigation/home.spec.js)
